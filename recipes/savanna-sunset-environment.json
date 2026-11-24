@@ -1,0 +1,210 @@
+{
+  "art": "savanna-sunset-art.webp (flat cover still, center 16:9 crop of pano-savanna-sunset.webp \u2014 the same scene the world plays; staged with the master in hidden_files/savanna-sunset-repair-2026-11-23/)",
+  "beds": [
+    {
+      "drift_rate": 0.42,
+      "level": 0.36,
+      "lowpass_cutoff": 3400,
+      "slope": 6,
+      "stereo_width": 0.88,
+      "type": "pink",
+      "warmth": 2
+    },
+    {
+      "drift_rate": 0.07,
+      "level": 0.16,
+      "lowpass_cutoff": 380,
+      "slope": 24,
+      "stereo_width": 0.46,
+      "type": "brown",
+      "warmth": 5
+    },
+    {
+      "drift_rate": 0.5,
+      "level": 0.09,
+      "lowpass_cutoff": 5600,
+      "slope": 6,
+      "stereo_width": 0.92,
+      "type": "grey",
+      "warmth": 0
+    }
+  ],
+  "conversion": "Flat catalog still (env-epic-savanna-sunset.webp, 1376x768) converted to a native photoreal 2240x1120 panorama + this own recipe, perfection sweep #27, Nov 23, 2026. Staged, not yet shipped.",
+  "description": "A wide East African savanna in the last light of the day: dry golden grassland running to a low hill horizon, flat-topped acacias scattered across the plain, the sun resting on the hills at the center of the world. The sound is the place itself \u2014 wind moving through dry grass in long waves, seed heads hissing as the gusts pass, doves and weaver birds settling into the acacias while the light lasts, and crickets rising as the light falls. It settles and darkens as the session runs, built to study inside the quiet end of the day.",
+  "drones": [
+    {
+      "amp_lfo_depth": 0.05,
+      "amp_lfo_rate": 0.006,
+      "base_freq": 73.42,
+      "brightness": 420,
+      "detune_cents": -3,
+      "level": 0.13,
+      "ratio_to_root": 1,
+      "walk_range": 0.8,
+      "walk_speed": 0.02,
+      "waveform": "sine"
+    },
+    {
+      "amp_lfo_depth": 0.04,
+      "amp_lfo_rate": 0.008,
+      "base_freq": 110.0,
+      "brightness": 700,
+      "detune_cents": 4,
+      "level": 0.06,
+      "ratio_to_root": 1.5,
+      "walk_range": 0.6,
+      "walk_speed": 0.017,
+      "waveform": "sine"
+    }
+  ],
+  "events": [
+    {
+      "density": 24,
+      "intensity_max": 0.1,
+      "intensity_min": 0.03,
+      "reverb_send": 0.35,
+      "stereo_spread": 0.8,
+      "type": "wind_gust"
+    },
+    {
+      "density": 8,
+      "intensity_max": 0.05,
+      "intensity_min": 0.02,
+      "reverb_send": 0.3,
+      "stereo_spread": 0.55,
+      "type": "dove_coo",
+      "window": "early"
+    },
+    {
+      "density": 13,
+      "intensity_max": 0.04,
+      "intensity_min": 0.015,
+      "reverb_send": 0.25,
+      "stereo_spread": 0.7,
+      "type": "weaver_settle",
+      "window": "early"
+    },
+    {
+      "density": 52,
+      "intensity_max": 0.045,
+      "intensity_min": 0.015,
+      "reverb_send": 0.2,
+      "stereo_spread": 0.75,
+      "type": "crickets"
+    }
+  ],
+  "honesty": "Evocative, not a recording. A composed procedural soundscape \u2014 grass wind, dusk birds and rising crickets rendered from synthesis; never claimed as a real place.",
+  "macro_evolution": {
+    "arc_duration_min": 50,
+    "brightness_drift": -0.6,
+    "event_density_drift": 0.7,
+    "morph_rate": 11,
+    "session_arc": "settling"
+  },
+  "master": {
+    "auto_fade_out": "off",
+    "ceiling": -1,
+    "fade_in_s": 30,
+    "loudness_target": -20
+  },
+  "mood_macros": [
+    "warm",
+    "vast",
+    "calm"
+  ],
+  "panorama": {
+    "file": "pano-savanna-sunset.webp",
+    "height": 1120,
+    "note": "Native 2240x1120 generation (candidate C). Equator remap of the measured ground-plane horizon (row 622 -> 560, Lanczos-3 vertical resampling, Drift method) + sky-masked matched-wrap tent crossfade (s64b96, corridor masked to the sky so the acacia canopies at the join stay single and sharp). Full gate evidence in hidden_files/savanna-sunset-repair-2026-11-23/.",
+    "seam_diff": 7.94,
+    "width": 2240
+  },
+  "pillars": [
+    "study"
+  ],
+  "pulse": {
+    "depth": 0.22,
+    "rate": 0.06,
+    "shape": "ease",
+    "target": "beds"
+  },
+  "schema_version": 1,
+  "seed_code": "AF1-AAAAAADYYQCS6-CF5B",
+  "seed_status": "PROPOSED at staging (Nov 23) \u2014 third world built 2026-11-23 (01 Gather, 02 Berrybasket Hollow Junior). Ship step must confirm no collision before wiring; if it collides, re-issue the seed and recompute seed_code with this same method.",
+  "series": "open plains",
+  "shipped_date": null,
+  "sound_design_notes": [
+    [
+      "bed_signature",
+      "Grass wind is the bed signature and the loudest continuous layer: a pink-noise bed with a 3400 Hz lowpass (far above the warm-pad beds) and a strong slow drift_rate of 0.42, so the wind audibly travels across the plain in waves; the 2650/4300 Hz texture bands (levels 0.15/0.10, the loudest textures in the recipe) carry the grass-stem and seed-head hiss on top of it. No warm pad, no brainwave layer, no brown-noise-dominant bed \u2014 structurally unrelated to this world's pre-v590 clone bed [warm_pad_amber .40, alpha_waves .20, brown_noise .20]."
+    ],
+    [
+      "loudest_layer",
+      "wind_gust is the loudest event layer (intensity to 0.10) and the grass-wind bed complex is the loudest continuous sound \u2014 the scene signature is loudest at every level of the recipe. The two drones are a faint warm root only (0.13/0.06), never the loudest element."
+    ],
+    [
+      "new_event_synth_recipes",
+      {
+        "dove_coo": "Doves settling at dusk. Each event is a soft two-to-three-note coo phrase: sine fundamental gliding 420->360 Hz per note with a faint 2nd harmonic at -16 dB, notes 0.35-0.5 s with 0.15-0.3 s gaps, raised-cosine attacks of at least 80 ms (never startling), total event 1.2-2.0 s. Gain = intensity (0.02-0.05). Early window only.",
+        "weaver_settle": "Weaver birds settling into acacia roosts. Each event is a short cluster: 3-7 dry chirps (descending sine chirps 2800->1900 Hz, 40-90 ms, lightly noise-banded) with one or two soft wing whispers (filtered noise swells 1200-3000 Hz, 0.2-0.4 s, slow attack). Total event 0.8-1.6 s, quiet (intensity 0.015-0.04). Early window only."
+      }
+    ],
+    [
+      "active_window_semantics",
+      "\"early\" = schedule the event type only while elapsed session time < arc_duration_min / 3 (for this world the first ~17 min of the 50-min settling arc \u2014 the dusk remnant). After the window, zero events of that type, however long the session runs. Applies to dove_coo and weaver_settle. (Same semantics as the Drift v2 bundle.)"
+    ],
+    [
+      "palette_compatibility",
+      "The event palette is append-only (world-parameters spec: the palette grows by appending crafted recipes). dove_coo and weaver_settle are APPENDED after the existing types (rain_drops, distant_thunder, wind_gust, fire_crackle, stream_babble, crickets, owl, loon, chimes, leaves_rustle, heartbeat, page_turn, doppler_passby, whale_call, ice_booms, spindrift_hiss, snow_slide). No existing type is renamed, removed, or reordered. The two new synth recipes above must be implemented in the site engine at the wiring step, appended the same way."
+    ],
+    [
+      "pillar_discipline",
+      "Study pillar: no thunder, no startling events, nothing above intensity 0.10; the loudness target is the -20 LUFS sleep-first standard per the pre-live gate. Rotation on wiring: 300 s per turn (Study)."
+    ],
+    [
+      "absent_by_design",
+      "No water of any kind, no fire, no traffic/passby, no thunder, no heartbeat, no rain \u2014 none of it exists in this scene."
+    ]
+  ],
+  "space": {
+    "damping": 0.52,
+    "decay": 3.4,
+    "distance": 0.52,
+    "reverb_size": "open_air",
+    "stereo_width_master": 0.9,
+    "wet": 0.24
+  },
+  "tagline": "Golden grass to the horizon, acacias going dark, and the plain settling into dusk.",
+  "textures": [
+    {
+      "Q": 7,
+      "center": 2650,
+      "drift_range": 22,
+      "drift_speed": 0.11,
+      "level": 0.15,
+      "pan": -0.3,
+      "pan_drift": 0.16
+    },
+    {
+      "Q": 11,
+      "center": 4300,
+      "drift_range": 16,
+      "drift_speed": 0.09,
+      "level": 0.1,
+      "pan": 0.25,
+      "pan_drift": 0.12
+    },
+    {
+      "Q": 5,
+      "center": 1250,
+      "drift_range": 12,
+      "drift_speed": 0.06,
+      "level": 0.07,
+      "pan": 0.05,
+      "pan_drift": 0.08
+    }
+  ],
+  "viewer_position": "Standing in the golden grass at the center of the plain at sunset \u2014 acacias scattered around, low hills on the horizon, the sun going down straight ahead, doves settling in the trees behind the light.",
+  "world_name": "Savanna Sunset",
+  "world_seed": 2026112303
+}
