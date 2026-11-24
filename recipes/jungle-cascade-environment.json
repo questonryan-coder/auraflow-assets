@@ -1,0 +1,212 @@
+{
+  "art": "jungle-cascade-art.webp (flat cover still, center 16:9 crop of pano-jungle-cascade.webp \u2014 the same scene the world plays; staged with the master in hidden_files/jungle-cascade-repair-2026-11-23/)",
+  "beds": [
+    {
+      "drift_rate": 0.18,
+      "level": 0.34,
+      "lowpass_cutoff": 2600,
+      "slope": 6,
+      "stereo_width": 0.84,
+      "type": "white",
+      "warmth": 0
+    },
+    {
+      "drift_rate": 0.11,
+      "level": 0.2,
+      "lowpass_cutoff": 880,
+      "slope": 12,
+      "stereo_width": 0.62,
+      "type": "pink",
+      "warmth": 2
+    },
+    {
+      "drift_rate": 0.05,
+      "level": 0.12,
+      "lowpass_cutoff": 300,
+      "slope": 24,
+      "stereo_width": 0.42,
+      "type": "brown",
+      "warmth": 4
+    }
+  ],
+  "conversion": "Flat catalog still (env-epic-jungle-cascade.webp, 1376x768) converted to a native photoreal 2240x1120 panorama + this own recipe, perfection sweep #28, Nov 23, 2026. Staged, not yet shipped.",
+  "description": "A hidden grotto in dense tropical rainforest: a two-tiered waterfall pouring over dark mossy ledges into a round emerald plunge pool, ferned banks and canopy walls closing the circle in every direction. The sound is the place itself \u2014 the steady broad roar of the falls with a low plunge-pool rumble underneath and a fine mist hiss on top, water dripping from the leaves around the shore, the outflow stream babbling away at the pool edge, the canopy stirring when a breath of air moves through the gorge, and now and then a short bird phrase from high in the trees. It holds steady and green the whole session, built to study inside the sound of falling water.",
+  "drones": [
+    {
+      "amp_lfo_depth": 0.04,
+      "amp_lfo_rate": 0.005,
+      "base_freq": 88.0,
+      "brightness": 380,
+      "detune_cents": -4,
+      "level": 0.07,
+      "ratio_to_root": 1,
+      "walk_range": 0.7,
+      "walk_speed": 0.018,
+      "waveform": "sine"
+    },
+    {
+      "amp_lfo_depth": 0.03,
+      "amp_lfo_rate": 0.007,
+      "base_freq": 174.08,
+      "brightness": 640,
+      "detune_cents": 5,
+      "level": 0.04,
+      "ratio_to_root": 1.98,
+      "walk_range": 0.5,
+      "walk_speed": 0.015,
+      "waveform": "sine"
+    }
+  ],
+  "events": [
+    {
+      "density": 90,
+      "intensity_max": 0.09,
+      "intensity_min": 0.04,
+      "reverb_send": 0.3,
+      "stereo_spread": 0.6,
+      "type": "stream_babble"
+    },
+    {
+      "density": 36,
+      "intensity_max": 0.06,
+      "intensity_min": 0.02,
+      "reverb_send": 0.35,
+      "stereo_spread": 0.85,
+      "type": "leaf_drip"
+    },
+    {
+      "density": 40,
+      "intensity_max": 0.06,
+      "intensity_min": 0.02,
+      "reverb_send": 0.28,
+      "stereo_spread": 0.75,
+      "type": "leaves_rustle"
+    },
+    {
+      "density": 7,
+      "intensity_max": 0.05,
+      "intensity_min": 0.02,
+      "reverb_send": 0.4,
+      "stereo_spread": 0.5,
+      "type": "jungle_bird_phrase"
+    },
+    {
+      "density": 30,
+      "intensity_max": 0.035,
+      "intensity_min": 0.012,
+      "reverb_send": 0.18,
+      "stereo_spread": 0.7,
+      "type": "crickets"
+    }
+  ],
+  "honesty": "Evocative, not a recording. A composed procedural soundscape \u2014 waterfall roar, leaf drips, outflow babble and jungle birds rendered from synthesis; never claimed as a real place.",
+  "macro_evolution": {
+    "arc_duration_min": 60,
+    "brightness_drift": 0.05,
+    "event_density_drift": 0.15,
+    "morph_rate": 9,
+    "session_arc": "steady"
+  },
+  "master": {
+    "auto_fade_out": "off",
+    "ceiling": -1,
+    "fade_in_s": 25,
+    "loudness_target": -20
+  },
+  "mood_macros": [
+    "forest",
+    "lush",
+    "calm"
+  ],
+  "panorama": {
+    "file": "pano-jungle-cascade.webp",
+    "height": 1120,
+    "note": "Native 2240x1120 generation (candidate A). Matched-wrap tent crossfade in two passes (s96b144 main corridor + s16b32 micro pass, Sea Fog precedent) because all four raw generations failed the wrap globally (seam_diff 31.7-44.1) while the scene itself was the strongest of the batch; the join corridor crosses only stochastic jungle texture (foliage, trunks, mossy shore) \u2014 no hard-edged scene feature at the join; the waterfall sits at frame center, 180 deg from the join. No equator remap: the pool waterline sits at eye level in the rendered views (gradient-peak median 547 vs equator 560 in a scene with no sky horizon). Full gate evidence in hidden_files/jungle-cascade-repair-2026-11-23/.",
+    "seam_diff": 9.29,
+    "width": 2240
+  },
+  "pillars": [
+    "study"
+  ],
+  "pulse": {
+    "depth": 0.18,
+    "rate": 0.09,
+    "shape": "ease",
+    "target": "beds"
+  },
+  "schema_version": 1,
+  "seed_code": "AF1-AAAAAADYYQCTA-5626",
+  "seed_status": "PROPOSED at staging (Nov 23) \u2014 fourth world built 2026-11-23 (01 Gather, 02 Berrybasket Hollow Junior, 03 Savanna Sunset). Verified unused in the daily-environments tree. Ship step must confirm no collision before wiring; if it collides, re-issue the seed and recompute seed_code with this same method.",
+  "series": "jungle gorge",
+  "shipped_date": null,
+  "sound_design_notes": [
+    [
+      "bed_signature",
+      "The waterfall is the bed signature and the loudest continuous layer: a white-noise bed (level 0.34, lowpass 2600 Hz, slow surge drift 0.18) carrying the broad roar of falling water, over a pink plunge-pool wash (0.20 @ 880 Hz) and a brown deep-pool rumble (0.12 @ 300 Hz). The 1750 Hz texture band (level 0.16, the loudest texture in the recipe) is the falling water's mid voice and the 5200 Hz band (0.11) its mist hiss. No warm pad, no brainwave layer \u2014 the bed family, cutoffs and texture centers are this gorge's own."
+    ],
+    [
+      "loudest_layer",
+      "The waterfall bed complex is the loudest continuous sound and stream_babble (the outflow, intensity to 0.09) is the loudest event \u2014 the scene signature is loudest at every level of the recipe. The two drones are a faint root only (0.07/0.04), never the loudest element."
+    ],
+    [
+      "new_event_synth_recipes",
+      {
+        "jungle_bird_phrase": "A short phrase from the high canopy (tanager/motmot character). Each event is 2-4 pure-tone notes: sine fundamentals between 2400-3900 Hz with a faint 2nd harmonic at -18 dB, notes 0.12-0.3 s with 0.08-0.2 s gaps, gentle pitch steps (never a slide whistle), soft attacks of at least 40 ms. Total event 0.6-1.4 s, quiet (intensity 0.02-0.05), sparse (density 7). Runs the whole session at the same low rate \u2014 a living gorge, not a performance.",
+        "leaf_drip": "Water dripping from leaves around the pool shore after the spray. Each event is a single droplet: a short sine ping gliding 1900->950 Hz over 60-90 ms with an exponential decay of 0.15-0.3 s and a faint noise tick at the attack (2-4 ms, -20 dB), occasionally doubled with a second smaller drip 0.2-0.5 s later at -8 dB. Raised-cosine attack of at least 10 ms (a plink, never a click). Gain = intensity (0.02-0.06). Runs the whole session \u2014 the gorge drips constantly."
+      }
+    ],
+    [
+      "palette_compatibility",
+      "The event palette is append-only (world-parameters spec: the palette grows by appending crafted recipes). leaf_drip and jungle_bird_phrase are APPENDED after the existing types (rain_drops, distant_thunder, wind_gust, fire_crackle, stream_babble, crickets, owl, loon, chimes, leaves_rustle, heartbeat, page_turn, doppler_passby, whale_call, ice_booms, spindrift_hiss, snow_slide, dove_coo, weaver_settle). No existing type is renamed, removed, or reordered. The two new synth recipes above must be implemented in the site engine at the wiring step, appended the same way."
+    ],
+    [
+      "pillar_discipline",
+      "Study pillar: no thunder, no startling events, nothing above intensity 0.09; the loudness target is the -20 LUFS sleep-first standard per the pre-live gate. Rotation on wiring: 300 s per turn (Study)."
+    ],
+    [
+      "absent_by_design",
+      "No rain (the drips are spray-fed leaves, not weather), no fire, no traffic/passby, no thunder, no heartbeat, no ocean surf \u2014 none of it exists in this scene."
+    ]
+  ],
+  "space": {
+    "damping": 0.38,
+    "decay": 4.8,
+    "distance": 0.44,
+    "reverb_size": "open_air",
+    "stereo_width_master": 0.86,
+    "wet": 0.3
+  },
+  "tagline": "A two-tier cascade pouring into an emerald pool, deep inside green walls of rainforest.",
+  "textures": [
+    {
+      "Q": 6,
+      "center": 1750,
+      "drift_range": 18,
+      "drift_speed": 0.08,
+      "level": 0.16,
+      "pan": -0.1,
+      "pan_drift": 0.1
+    },
+    {
+      "Q": 9,
+      "center": 5200,
+      "drift_range": 14,
+      "drift_speed": 0.07,
+      "level": 0.11,
+      "pan": 0.2,
+      "pan_drift": 0.09
+    },
+    {
+      "Q": 4,
+      "center": 700,
+      "drift_range": 10,
+      "drift_speed": 0.05,
+      "level": 0.08,
+      "pan": 0.05,
+      "pan_drift": 0.06
+    }
+  ],
+  "viewer_position": "Standing on the mossy shore at the edge of the plunge pool \u2014 the two-tier cascade pouring in straight ahead, the outflow stream slipping away at your side, rainforest walls and canopy closing the circle behind you.",
+  "world_name": "Jungle Cascade",
+  "world_seed": 2026112304
+}
