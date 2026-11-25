@@ -1,0 +1,169 @@
+{
+  "art": "cozy-acre-cottage-art.webp (bright friendly storybook illustration, 16:9 \u2014 small stone cottage with flower boxes, tiny red barn, pumpkin and sunflower garden, pond with ducks, warm sunshine, no people, no text)",
+  "beds": [
+    {
+      "drift_rate": 0.13,
+      "level": 0.3,
+      "lowpass_cutoff": 1900,
+      "slope": 12,
+      "stereo_width": 0.68,
+      "type": "pink",
+      "warmth": 2
+    },
+    {
+      "drift_rate": 0.28,
+      "level": 0.14,
+      "lowpass_cutoff": 3900,
+      "slope": 6,
+      "stereo_width": 0.86,
+      "type": "white",
+      "warmth": -2
+    }
+  ],
+  "description": "A cozy little cottage farmstead on a sunny morning: a small stone cottage with flower boxes and a curl of chimney smoke, a tiny red barn, a garden of pumpkins and sunflowers, and a small pond where ducks drift past. The sound is slow and kind \u2014 gentle water, soft leaves rustling, a very soft hearth crackle, and now and then a page turning in a storybook, thinning out as sleep comes.",
+  "drones": [
+    {
+      "amp_lfo_depth": 0.055,
+      "amp_lfo_rate": 0.011,
+      "base_freq": 196.0,
+      "brightness": 1250,
+      "detune_cents": -2,
+      "level": 0.19,
+      "ratio_to_root": 1,
+      "walk_range": 0.7,
+      "walk_speed": 0.019,
+      "waveform": "sine"
+    },
+    {
+      "amp_lfo_depth": 0.038,
+      "amp_lfo_rate": 0.012,
+      "base_freq": 294.0,
+      "brightness": 1850,
+      "detune_cents": 3,
+      "level": 0.11,
+      "ratio_to_root": 1.5,
+      "walk_range": 0.55,
+      "walk_speed": 0.016,
+      "waveform": "triangle"
+    },
+    {
+      "amp_lfo_depth": 0.022,
+      "amp_lfo_rate": 0.009,
+      "base_freq": 392.0,
+      "brightness": 2600,
+      "detune_cents": -4,
+      "level": 0.055,
+      "ratio_to_root": 2,
+      "walk_range": 0.4,
+      "walk_speed": 0.013,
+      "waveform": "sine"
+    }
+  ],
+  "events": [
+    {
+      "density": 84,
+      "intensity_max": 0.05,
+      "intensity_min": 0.02,
+      "reverb_send": 0.13,
+      "stereo_spread": 0.34,
+      "type": "stream_babble"
+    },
+    {
+      "density": 38,
+      "intensity_max": 0.04,
+      "intensity_min": 0.01,
+      "reverb_send": 0.11,
+      "stereo_spread": 0.42,
+      "type": "leaves_rustle"
+    },
+    {
+      "density": 22,
+      "intensity_max": 0.03,
+      "intensity_min": 0.01,
+      "reverb_send": 0.1,
+      "stereo_spread": 0.22,
+      "type": "fire_crackle"
+    },
+    {
+      "density": 7,
+      "intensity_max": 0.03,
+      "intensity_min": 0.01,
+      "reverb_send": 0.07,
+      "stereo_spread": 0.18,
+      "type": "page_turn"
+    }
+  ],
+  "honesty": "Evocative, not a recording. A composed procedural soundscape \u2014 gentle garden air, a trickling pond and soft rustling leaves rendered from synthesis; never claimed as a real place.",
+  "junior": true,
+  "macro_evolution": {
+    "arc_duration_min": 34,
+    "brightness_drift": -0.28,
+    "event_density_drift": 0.38,
+    "morph_rate": 16,
+    "session_arc": "deepening"
+  },
+  "master": {
+    "auto_fade_out": "off",
+    "ceiling": -1,
+    "fade_in_s": 26,
+    "loudness_target": -20
+  },
+  "mood_macros": [
+    "cozy",
+    "warm",
+    "calm"
+  ],
+  "pillars": [
+    "sleep"
+  ],
+  "pulse": {
+    "depth": 0.15,
+    "rate": 0.1,
+    "shape": "ease",
+    "target": "beds"
+  },
+  "schema_version": 1,
+  "seed_code": "AF1-AAAAAADYYQC7M-186D",
+  "series": "junior",
+  "shipped_date": "2026-11-25",
+  "space": {
+    "damping": 0.3,
+    "decay": 2.0,
+    "distance": 0.07,
+    "reverb_size": "open_air",
+    "stereo_width_master": 0.68,
+    "wet": 0.12
+  },
+  "tagline": "A tiny cottage, a pumpkin garden, and ducks on the pond \u2014 a sunny little farm made for sweet dreams.",
+  "textures": [
+    {
+      "Q": 10,
+      "center": 520,
+      "drift_range": 9,
+      "drift_speed": 0.045,
+      "level": 0.1,
+      "pan": -0.15,
+      "pan_drift": 0.08
+    },
+    {
+      "Q": 16,
+      "center": 1500,
+      "drift_range": 6,
+      "drift_speed": 0.035,
+      "level": 0.055,
+      "pan": 0.26,
+      "pan_drift": 0.06
+    },
+    {
+      "Q": 26,
+      "center": 2900,
+      "drift_range": 4,
+      "drift_speed": 0.028,
+      "level": 0.028,
+      "pan": 0.08,
+      "pan_drift": 0.045
+    }
+  ],
+  "world_name": "Cozy Acre Cottage",
+  "world_seed": 2026112502
+}

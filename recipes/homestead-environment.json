@@ -1,0 +1,206 @@
+{
+  "art": "homestead-art.webp (flat cover still, center 16:9 crop of homestead-pano.webp \u2014 the same scene the world plays)",
+  "beds": [
+    {
+      "drift_rate": 0.09,
+      "level": 0.38,
+      "lowpass_cutoff": 340,
+      "slope": 24,
+      "stereo_width": 0.52,
+      "type": "brown",
+      "warmth": 5
+    },
+    {
+      "drift_rate": 0.2,
+      "level": 0.24,
+      "lowpass_cutoff": 1150,
+      "slope": 12,
+      "stereo_width": 0.7,
+      "type": "pink",
+      "warmth": 2
+    },
+    {
+      "drift_rate": 0.3,
+      "level": 0.1,
+      "lowpass_cutoff": 3400,
+      "slope": 6,
+      "stereo_width": 0.84,
+      "type": "white",
+      "warmth": -2
+    }
+  ],
+  "description": "A rural homestead at dusk in late autumn: a stone farmhouse with warm amber windows in the center distance, a red barn and bare russet orchard behind a split-rail fence, golden wheat stubble and a still pond holding the last light. The sound deepens and thins as the evening goes on \u2014 low warm beds, the hearth fire crackling as the scene signature and loudest layer, a soft stream at the pond edge, one distant owl early on, and nothing surprising after the first minutes.",
+  "drones": [
+    {
+      "amp_lfo_depth": 0.2,
+      "amp_lfo_rate": 0.008,
+      "base_freq": 58.27,
+      "brightness": 470,
+      "detune_cents": -3,
+      "level": 0.34,
+      "ratio_to_root": 1,
+      "walk_range": 2.2,
+      "walk_speed": 0.05,
+      "waveform": "sine"
+    },
+    {
+      "amp_lfo_depth": 0.16,
+      "amp_lfo_rate": 0.01,
+      "base_freq": 87.41,
+      "brightness": 790,
+      "detune_cents": 4,
+      "level": 0.22,
+      "ratio_to_root": 1.5,
+      "walk_range": 1.9,
+      "walk_speed": 0.045,
+      "waveform": "triangle"
+    },
+    {
+      "amp_lfo_depth": 0.12,
+      "amp_lfo_rate": 0.007,
+      "base_freq": 116.54,
+      "brightness": 1240,
+      "detune_cents": -5,
+      "level": 0.14,
+      "ratio_to_root": 2,
+      "walk_range": 1.6,
+      "walk_speed": 0.038,
+      "waveform": "sine"
+    },
+    {
+      "amp_lfo_depth": 0.07,
+      "amp_lfo_rate": 0.005,
+      "base_freq": 174.81,
+      "brightness": 1980,
+      "detune_cents": 6,
+      "level": 0.07,
+      "ratio_to_root": 3,
+      "walk_range": 1.1,
+      "walk_speed": 0.028,
+      "waveform": "sine"
+    }
+  ],
+  "events": [
+    {
+      "density": 185,
+      "intensity_max": 0.13,
+      "intensity_min": 0.04,
+      "reverb_send": 0.2,
+      "stereo_spread": 0.3,
+      "type": "fire_crackle"
+    },
+    {
+      "density": 64,
+      "intensity_max": 0.06,
+      "intensity_min": 0.02,
+      "reverb_send": 0.28,
+      "stereo_spread": 0.5,
+      "type": "stream_babble"
+    },
+    {
+      "density": 30,
+      "intensity_max": 0.05,
+      "intensity_min": 0.02,
+      "reverb_send": 0.22,
+      "stereo_spread": 0.52,
+      "type": "leaves_rustle"
+    },
+    {
+      "density": 7,
+      "intensity_max": 0.05,
+      "intensity_min": 0.02,
+      "reverb_send": 0.34,
+      "stereo_spread": 0.6,
+      "type": "owl"
+    }
+  ],
+  "honesty": "Evocative, not a recording. A composed procedural soundscape \u2014 hearth warmth, farmstead air and pond-side stillness rendered from synthesis; never claimed as a real place.",
+  "macro_evolution": {
+    "arc_duration_min": 75,
+    "brightness_drift": -0.68,
+    "event_density_drift": 0.62,
+    "morph_rate": 14,
+    "session_arc": "deepening"
+  },
+  "master": {
+    "auto_fade_out": "off",
+    "ceiling": -1,
+    "fade_in_s": 34,
+    "loudness_target": -20
+  },
+  "mood_macros": [
+    "cozy",
+    "warm",
+    "vast"
+  ],
+  "panorama": {
+    "file": "homestead-pano.webp",
+    "height": 1120,
+    "seam_diff": 0.0,
+    "width": 2240,
+    "wrapcheck": "homestead-wrapcheck.jpg"
+  },
+  "pillars": [
+    "sleep"
+  ],
+  "pulse": {
+    "depth": 0.24,
+    "rate": 0.09,
+    "shape": "ease",
+    "target": "beds"
+  },
+  "schema_version": 1,
+  "seed_code": "AF1-AAAAAADYYQC7K-81BD",
+  "series": "cozy interiors",
+  "shipped_date": "2026-11-25",
+  "space": {
+    "damping": 0.52,
+    "decay": 3.1,
+    "distance": 0.42,
+    "reverb_size": "open_air",
+    "stereo_width_master": 0.8,
+    "wet": 0.26
+  },
+  "tagline": "Stone walls, warm windows, and the whole farmstead settling down \u2014 the homestead at dusk, and the night going quiet around it.",
+  "textures": [
+    {
+      "Q": 9,
+      "center": 290,
+      "drift_range": 16,
+      "drift_speed": 0.08,
+      "level": 0.2,
+      "pan": -0.28,
+      "pan_drift": 0.22
+    },
+    {
+      "Q": 15,
+      "center": 760,
+      "drift_range": 12,
+      "drift_speed": 0.06,
+      "level": 0.12,
+      "pan": 0.16,
+      "pan_drift": 0.16
+    },
+    {
+      "Q": 23,
+      "center": 1750,
+      "drift_range": 8,
+      "drift_speed": 0.045,
+      "level": 0.06,
+      "pan": -0.06,
+      "pan_drift": 0.09
+    },
+    {
+      "Q": 31,
+      "center": 3100,
+      "drift_range": 5,
+      "drift_speed": 0.03,
+      "level": 0.03,
+      "pan": 0.38,
+      "pan_drift": 0.05
+    }
+  ],
+  "viewer_position": "On the homestead's meadow edge at dusk, looking across wheat stubble and the split-rail fence to the stone farmhouse with amber windows, red barn and orchard in the center distance; the still pond holds the last light to one side and open grassland wraps the edges.",
+  "world_name": "Homestead",
+  "world_seed": 2026112501
+}
