@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zilla — light door</title>
+<meta name="robots" content="noindex">
+<script>
+// Permanent link for Zilla's light door (the featherweight chat page).
+// The tunnel watchdog maintains ../zilla-door-current.json with the
+// door's current public address; this page reads it and redirects
+// there, preserving any path/query appended after /zilla-door.
+(function () {
+  var p = location.pathname;
+  var i = p.indexOf('/zilla-door');
+  var root = i >= 0 ? p.slice(0, i) : '';
+  var suffix = i >= 0 ? p.slice(i + '/zilla-door'.length) : '';
+  if (suffix === '/') suffix = '';
+  suffix += location.search + location.hash;
+  fetch(root + '/zilla-door-current.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && d.base_url) { location.replace(d.base_url + suffix); }
+      else { document.getElementById('msg').textContent = 'The pointer file has no current address yet.'; }
+    })
+    .catch(function () {
+      document.getElementById('msg').textContent = 'Could not load the current address.';
+    });
+})();
+</script>
+</head>
+<body>
+<p id="msg">Taking you to Zilla&hellip;</p>
+<p><a href="../zilla-door-current.json">Current door address (JSON)</a></p>
+</body>
+</html>

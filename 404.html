@@ -6,19 +6,24 @@
 <meta name="robots" content="noindex">
 <script>
 // GitHub Pages serves this file (with HTTP 404) for any path that has no
-// real file — including deep links under /zilla/<path>, which exist only
-// on the live service. For those, resolve the permanent Zilla pointer
-// and redirect to the current service address with the path preserved.
-// All other paths just get the plain not-found message below.
+// real file — including deep links under /zilla/<path> and
+// /zilla-door/<path>, which exist only on the live services. For those,
+// resolve the matching permanent pointer and redirect to the current
+// address with the path preserved. /zilla-door is checked first: its
+// name contains /zilla as a prefix. All other paths just get the plain
+// not-found message below.
 (function () {
   var p = location.pathname;
-  var i = p.indexOf('/zilla');
+  var seg = '/zilla', ptr = '/zilla-current.json';
+  var j = p.indexOf('/zilla-door');
+  if (j >= 0) { seg = '/zilla-door'; ptr = '/zilla-door-current.json'; }
+  var i = seg === '/zilla-door' ? j : p.indexOf(seg);
   if (i < 0) return;
   var root = p.slice(0, i);
-  var suffix = p.slice(i + '/zilla'.length);
+  var suffix = p.slice(i + seg.length);
   if (suffix === '/') suffix = '';
   suffix += location.search + location.hash;
-  fetch(root + '/zilla-current.json', { cache: 'no-store' })
+  fetch(root + ptr, { cache: 'no-store' })
     .then(function (r) { return r.json(); })
     .then(function (d) { if (d && d.base_url) location.replace(d.base_url + suffix); })
     .catch(function () {});
