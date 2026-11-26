@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Not found</title>
+<meta name="robots" content="noindex">
+<script>
+// GitHub Pages serves this file (with HTTP 404) for any path that has no
+// real file — including deep links under /zilla/<path>, which exist only
+// on the live service. For those, resolve the permanent Zilla pointer
+// and redirect to the current service address with the path preserved.
+// All other paths just get the plain not-found message below.
+(function () {
+  var p = location.pathname;
+  var i = p.indexOf('/zilla');
+  if (i < 0) return;
+  var root = p.slice(0, i);
+  var suffix = p.slice(i + '/zilla'.length);
+  if (suffix === '/') suffix = '';
+  suffix += location.search + location.hash;
+  fetch(root + '/zilla-current.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) { if (d && d.base_url) location.replace(d.base_url + suffix); })
+    .catch(function () {});
+})();
+</script>
+</head>
+<body>
+<p>404 — not found.</p>
+</body>
+</html>

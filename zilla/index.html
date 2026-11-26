@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zilla — verification service</title>
+<meta name="robots" content="noindex">
+<script>
+// Permanent link for the Zilla verification service. The keepalive
+// watchdog maintains ../zilla-current.json with the service's current
+// public address; this page reads it and redirects there, preserving
+// any path/query appended after /zilla.
+(function () {
+  var p = location.pathname;
+  var i = p.indexOf('/zilla');
+  var root = i >= 0 ? p.slice(0, i) : '';
+  var suffix = i >= 0 ? p.slice(i + '/zilla'.length) : '';
+  if (suffix === '/') suffix = '';
+  suffix += location.search + location.hash;
+  fetch(root + '/zilla-current.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && d.base_url) { location.replace(d.base_url + suffix); }
+      else { document.getElementById('msg').textContent = 'The pointer file has no current address yet.'; }
+    })
+    .catch(function () {
+      document.getElementById('msg').textContent = 'Could not load the current address.';
+    });
+})();
+</script>
+</head>
+<body>
+<p id="msg">Taking you to the Zilla verification service&hellip;</p>
+<p><a href="../zilla-current.json">Current service address (JSON)</a></p>
+</body>
+</html>
